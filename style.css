@@ -1,0 +1,62 @@
+body{
+    background-color: #f0f0f0;
+    font-family: 'Catamaran', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.titulo-section{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.grupo-medias{
+    display: grid;
+    padding: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 16px;
+}
+
+.media{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    border-radius: 26px;
+    overflow: hidden;
+    padding-bottom: 10px;
+    
+    
+        & img{
+            width: 100%;
+        }
+
+
+    & .tittle {
+        display: flex;
+        flex-direction: rows;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 10px;
+        height: 20px;
+    }
+}
+
+.whatsapp{
+    width: 50px;
+    z-index: 999;
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    background-color: #25d366;
+    color: white;
+    padding: 10px;
+    border-radius: 26px;
+    cursor: pointer;
+    right: 10px;
+    bottom: 10px;
+}
