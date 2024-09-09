@@ -8,7 +8,35 @@ body{
 .titulo-section{
     display: flex;
     justify-content: center;
-    margin: 10px 0px;
+    margin: 20px 0px;
+}
+
+.filtersElement{
+    display: grid;
+    padding: 0px 10px;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 8px;
+
+    & >button{
+        padding: 10px;
+        border: none;
+        border-radius: 26px;
+        background-color: #f0f0f0;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        font-size: 1rem;
+
+        &:hover{
+            background-color: #197FE6;
+            color: white;
+        }
+
+        &:active{
+            background-color: #197FE6;
+            color: white;
+        }
+    }
+
 }
 
 .grupo-medias{
@@ -60,4 +88,13 @@ body{
     cursor: pointer;
     right: 10px;
     bottom: 10px;
+    transition: scale 0.3s;
+
+    &:hover{
+        background-color: #128c7e;
+        scale: 1.1;
+    }
 }
+
+
+
