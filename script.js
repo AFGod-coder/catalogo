@@ -19,15 +19,21 @@ for (let i = 1; i <= cantidad; i++) {
     const h3 = document.createElement('h3');
     const p = document.createElement('p');
 
-    if (tipoMedia === 'canillera'){
-        h3.textContent = 'Canillera';
-        p.textContent = '$14.000';
+    if (tipoMedia === 'promo'){
+        h3.textContent = 'Promo';
+        p.textContent = '$22.000';
+
+        p.style.color = '#197FE6';
+        
     } else if (tipoMedia === 'tobillera'){
         h3.textContent = 'Tobillera';
         p.textContent = '$12.000';
     } else if (tipoMedia === 'baleta'){
         h3.textContent = 'Baleta';
         p.textContent = '$10.000';
+    } else if (tipoMedia === 'canillera'){
+        h3.textContent = 'Canillera';
+        p.textContent = '$14.000';
     }
 
     
@@ -45,9 +51,10 @@ for (let i = 1; i <= cantidad; i++) {
 
 }
 
+renderArticle('promo', 5);
 renderArticle('canillera', 9);
-renderArticle('tobillera', 1);
-renderArticle('baleta', 1);
+renderArticle('tobillera', 2);
+renderArticle('baleta', 2);
 
 
 const whatsappLink = document.querySelector('.whatsapp');
