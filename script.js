@@ -8,35 +8,40 @@ for (let i = 1; i <= cantidad; i++) {
 
     const imgDiv = document.createElement('div');
     imgDiv.classList.add('imgen');
-
+    
     const img = document.createElement('img');
-    img.src = `img/${tipoMedia} (${i}).png`;
     img.alt = '';
-
+    
     const titleDiv = document.createElement('div');
     titleDiv.classList.add('tittle');
-
+    
     const h3 = document.createElement('h3');
     const p = document.createElement('p');
-
+    
     if (tipoMedia === 'promo'){
         h3.textContent = 'Promo';
         p.textContent = '$22.000';
-
         p.style.color = '#197FE6';
         article.classList.add('promo');
+        img.src = `img/${tipoMedia}/${tipoMedia} (${i}).png`;
+        
     } else if (tipoMedia === 'tobillera'){
         h3.textContent = 'Tobillera';
         p.textContent = '$12.000';
         article.classList.add('tobillera');
+        img.src = `img/${tipoMedia}/${tipoMedia} (${i}).png`;
+        
     } else if (tipoMedia === 'baleta'){
         h3.textContent = 'Baleta';
         p.textContent = '$10.000';
         article.classList.add('baleta');
+        img.src = `img/${tipoMedia}/${tipoMedia} (${i}).png`;
+        
     } else if (tipoMedia === 'canillera'){
         h3.textContent = 'Canillera';
         p.textContent = '$14.000';
         article.classList.add('canillera');
+        img.src = `img/${tipoMedia}/${tipoMedia} (${i}).png`;
     }
 
     titleDiv.appendChild(h3);
@@ -52,8 +57,8 @@ for (let i = 1; i <= cantidad; i++) {
 }
 
 renderArticle('promo', 5);
-renderArticle('canillera', 9);
-renderArticle('tobillera', 2);
+renderArticle('canillera', 14);
+renderArticle('tobillera', 5);
 renderArticle('baleta', 2);
 
 
@@ -120,3 +125,5 @@ baletaButton.addEventListener('click', () => {
         }
     });
 });
+
+
