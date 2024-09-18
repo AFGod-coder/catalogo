@@ -65,15 +65,25 @@ class MediaCatalog {
     setupFilterButtons(buttonSelectors) {
         buttonSelectors.forEach(({ buttonSelector, mediaClass }) => {
             const button = document.querySelector(buttonSelector);
+            let isFiltered = false;
+
             button.addEventListener('click', () => {
                 const mediaArticles = document.querySelectorAll('.media');
-                mediaArticles.forEach(article => {
-                    if (article.classList.contains(mediaClass)) {
+                if (isFiltered) {
+                    mediaArticles.forEach(article => {
                         article.style.display = 'block';
-                    } else {
-                        article.style.display = 'none';
-                    }
-                });
+                    });
+                    isFiltered = false;
+                } else {
+                    mediaArticles.forEach(article => {
+                        if (article.classList.contains(mediaClass)) {
+                            article.style.display = 'block';
+                        } else {
+                            article.style.display = 'none';
+                        }
+                    });
+                    isFiltered = true;
+                }
             });
         });
     }
