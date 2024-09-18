@@ -8,9 +8,6 @@ class MediaCatalog {
             const article = document.createElement('article');
             article.classList.add('media');
 
-            const imgDiv = document.createElement('div');
-            imgDiv.classList.add('imgen');
-
             const img = document.createElement('img');
             img.alt = '';
 
@@ -19,6 +16,8 @@ class MediaCatalog {
 
             const h3 = document.createElement('h3');
             const p = document.createElement('p');
+
+            img.loading = 'lazy';
 
             if (tipoMedia === 'promo') {
                 h3.textContent = 'Promo';
@@ -49,8 +48,7 @@ class MediaCatalog {
             titleDiv.appendChild(h3);
             titleDiv.appendChild(p);
 
-            article.appendChild(imgDiv);
-            imgDiv.appendChild(img);
+            article.appendChild(img);
             article.appendChild(titleDiv);
 
             this.section.appendChild(article);
@@ -83,12 +81,12 @@ class MediaCatalog {
 
 const catalog = new MediaCatalog('.grupo-medias.canilleras');
 
-catalog.renderArticle('promo', 5);
+catalog.renderArticle('promo', 6);
 catalog.renderArticle('canillera', 14);
-catalog.renderArticle('tobillera', 5);
+catalog.renderArticle('tobillera', 6);
 catalog.renderArticle('baleta', 2);
 
-catalog.setupWhatsAppLink('.whatsapp', '+573204920412', 'Deseo hacer un pedido de medias 🧦🎊');
+catalog.setupWhatsAppLink('.whatsapp', '+573026585140', 'Deseo hacer un pedido de medias 🧦🎊');
 
 catalog.setupFilterButtons([
     { buttonSelector: '#promos', mediaClass: 'promo' },
